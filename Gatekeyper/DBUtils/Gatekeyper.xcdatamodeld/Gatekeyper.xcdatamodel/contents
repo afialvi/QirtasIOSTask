@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ConfigEntity" representedClassName="ConfigEntity" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="no_of_failed_attempts" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="operator_shift_hours" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="password_type" optional="YES" attributeType="String"/>
+        <attribute name="password_validation" optional="YES" attributeType="String"/>
+        <attribute name="starter_unlock_seconds" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="user_lock_minutes" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="languages" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LanguageEntity" inverseName="config" inverseEntity="LanguageEntity"/>
+    </entity>
+    <entity name="LanguageEntity" representedClassName="LanguageEntity" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="config" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ConfigEntity" inverseName="languages" inverseEntity="ConfigEntity"/>
+    </entity>
+    <entity name="UserEntity" representedClassName="UserEntity" syncable="YES">
+        <attribute name="accessToken" optional="YES" attributeType="String"/>
+        <attribute name="customerId" optional="YES" attributeType="String"/>
+        <attribute name="employeeId" optional="YES" attributeType="String"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="jobTitle" optional="YES" attributeType="String"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="password" optional="YES" attributeType="String"/>
+        <attribute name="salt" optional="YES" attributeType="String"/>
+        <attribute name="userId" optional="YES" attributeType="String"/>
+        <attribute name="userName" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="ConfigEntity" positionX="-54" positionY="9" width="128" height="165"/>
+        <element name="LanguageEntity" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="UserEntity" positionX="-63" positionY="63" width="128" height="193"/>
+    </elements>
+</model>

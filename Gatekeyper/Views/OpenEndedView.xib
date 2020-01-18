@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="OpenEndedView" customModule="Gatekeyper" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="myc-wB-eLT">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f0t-4k-jlk">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="52"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GaY-Lj-Rax">
+                                    <rect key="frame" x="20" y="9" width="318" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vb0-DE-nTQ">
+                                    <rect key="frame" x="346" y="13" width="60" height="26"/>
+                                    <color key="backgroundColor" red="0.0065074521119999999" green="0.67074871059999996" blue="0.9039672017" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="60" id="Yxs-kt-e8c"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                    <state key="normal" title="Proceed">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="proceed:" destination="iN0-l3-epB" eventType="touchUpInside" id="F48-7K-zJs"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="GaY-Lj-Rax" firstAttribute="centerY" secondItem="f0t-4k-jlk" secondAttribute="centerY" id="Q2X-hq-j0h"/>
+                                <constraint firstItem="GaY-Lj-Rax" firstAttribute="leading" secondItem="f0t-4k-jlk" secondAttribute="leading" constant="20" symbolic="YES" id="RVW-qy-w0a"/>
+                                <constraint firstItem="Vb0-DE-nTQ" firstAttribute="leading" secondItem="GaY-Lj-Rax" secondAttribute="trailing" constant="8" id="Y8X-oi-aUk"/>
+                                <constraint firstAttribute="trailing" secondItem="Vb0-DE-nTQ" secondAttribute="trailing" constant="8" id="pVx-Xi-6Ex"/>
+                                <constraint firstItem="Vb0-DE-nTQ" firstAttribute="centerY" secondItem="GaY-Lj-Rax" secondAttribute="centerY" id="wkD-cl-d1D"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="f0t-4k-jlk" firstAttribute="top" secondItem="myc-wB-eLT" secondAttribute="top" id="6iL-Ce-8mw"/>
+                        <constraint firstAttribute="bottom" secondItem="f0t-4k-jlk" secondAttribute="bottom" id="Lfm-Xt-Ek3"/>
+                        <constraint firstItem="f0t-4k-jlk" firstAttribute="leading" secondItem="myc-wB-eLT" secondAttribute="leading" id="d40-j1-GV1"/>
+                        <constraint firstAttribute="trailing" secondItem="f0t-4k-jlk" secondAttribute="trailing" id="iht-y8-dmn"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="myc-wB-eLT" secondAttribute="bottom" id="AV2-V4-D6P"/>
+                <constraint firstItem="myc-wB-eLT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GDw-fW-kSN"/>
+                <constraint firstAttribute="trailing" secondItem="myc-wB-eLT" secondAttribute="trailing" id="eFe-u4-UsZ"/>
+                <constraint firstItem="myc-wB-eLT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wqT-Tk-c7S"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="proceedBtn" destination="Vb0-DE-nTQ" id="hr0-SD-tI3"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="117"/>
+        </view>
+    </objects>
+</document>
